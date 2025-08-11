@@ -8,7 +8,7 @@ import {
   FaFacebook,
 } from "react-icons/fa";
 import Logo from "./Logo";
-import { Link } from "react-router";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="py-8 md:py-12">
           {/* Main Footer Content */}
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
-            {/* Logo and Copyright Section */}
+            {/* Logo and Copyright */}
             <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 text-center sm:text-left">
               <Logo />
               <div className="text-gray-600">
@@ -27,12 +27,12 @@ const Footer = () => {
                   © {currentYear} All rights reserved
                 </p>
                 <p className="text-xs md:text-sm text-gray-500 mt-1">
-                  Crafted with ❤️ for amazing experiences
+                 Made with coffee, code, and a little bit of magic 
                 </p>
               </div>
             </div>
 
-            {/* Social Media Links */}
+            {/* Social Media */}
             <div className="flex items-center space-x-4 md:space-x-6">
               <a
                 href="https://twitter.com"
@@ -69,9 +69,9 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group p-2 rounded-full bg-white shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-                aria-label="Follow on Instagram"
+                aria-label="Follow on Facebook"
               >
-                <FaFacebook className="w-4 h-4 md:w-5 md:h-5 text-gray-600 group-hover:text-pink-500 transition-colors duration-300" />
+                <FaFacebook className="w-4 h-4 md:w-5 md:h-5 text-gray-600 group-hover:text-blue-600 transition-colors duration-300" />
               </a>
 
               <a
@@ -84,39 +84,51 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Bottom Section - Optional Portfolio Links */}
+          {/* Bottom Navigation */}
           <div className="mt-8 pt-6 border-t border-gray-200">
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-gray-500">
-              <Link
-                to="/"
-                className="hover:text-gray-700 transition-colors duration-300"
+              <ScrollLink
+                to="home"
+                smooth={true}
+                duration={500}
+                offset={-70}
+                className="cursor-pointer hover:text-gray-700 transition-colors duration-300"
               >
                 Home
-              </Link>
-              <Link
-                to="/projects"
-                className="hover:text-gray-700 transition-colors duration-300"
+              </ScrollLink>
+              <ScrollLink
+                to="projects"
+                smooth={true}
+                duration={500}
+                offset={-70}
+                className="cursor-pointer hover:text-gray-700 transition-colors duration-300"
               >
                 Projects
-              </Link>
-              <Link
-                 to="/contact"
-                className="hover:text-gray-700 transition-colors duration-300"
+              </ScrollLink>
+              <ScrollLink
+                to="contact"
+                smooth={true}
+                duration={500}
+                offset={-70}
+                className="cursor-pointer hover:text-gray-700 transition-colors duration-300"
               >
                 Contact
-              </Link>
-              <Link
-                to="/skills"
-                className="hover:text-gray-700 transition-colors duration-300"
+              </ScrollLink>
+              <ScrollLink
+                to="skills"
+                smooth={true}
+                duration={500}
+                offset={-70}
+                className="cursor-pointer hover:text-gray-700 transition-colors duration-300"
               >
-                Skill
-              </Link>
+                Skills
+              </ScrollLink>
             </div>
 
-            {/* Back to Top Button - Optional */}
+            {/* Back to Top Button */}
             <div className="flex justify-center mt-4">
               <button
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                onClick={() => scroll.scrollToTop({ duration: 500, smooth: true })}
                 className="group flex items-center space-x-2 px-4 py-2 text-xs text-gray-500 hover:text-gray-700 transition-colors duration-300"
               >
                 <span>Back to top</span>

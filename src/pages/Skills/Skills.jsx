@@ -12,6 +12,7 @@ import {
   FaServer,
   FaPalette,
   FaTools,
+  FaGithub,
 } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
 
@@ -21,15 +22,16 @@ import {
   SiTailwindcss,
   SiNextdotjs,
   SiDaisyui,
-//   SiVisualstudiocode,
- 
+  //   SiVisualstudiocode,
   SiFirebase,
   SiVercel,
   SiNetlify,
   SiFigma,
   SiPostman,
+  SiTypescript,
+  SiJsonwebtokens,
 } from "react-icons/si";
- 
+
 const Skills = () => {
   const skillCategories = [
     {
@@ -41,37 +43,31 @@ const Skills = () => {
           name: "HTML5",
           icon: FaHtml5,
           color: "text-orange-500",
-          levelText: "Good",
         },
         {
           name: "CSS3",
           icon: FaCss3Alt,
           color: "text-blue-400",
-          levelText: "Good",
         },
         {
           name: "JavaScript",
           icon: FaJs,
           color: "text-yellow-500",
-          levelText: "Intermediate",
         },
         {
           name: "React",
           icon: FaReact,
           color: "text-blue-500",
-          levelText: "Intermediate",
         },
         {
           name: "Tailwind CSS",
           icon: SiTailwindcss,
           color: "text-cyan-500",
-          levelText: "Good",
         },
         {
           name: "DaisyUI",
           icon: SiDaisyui,
           color: "text-green-400",
-          levelText: "Good",
         },
       ],
     },
@@ -84,25 +80,26 @@ const Skills = () => {
           name: "Node.js",
           icon: FaNodeJs,
           color: "text-green-600",
-          levelText: "Learning",
         },
         {
           name: "Express.js",
           icon: SiExpress,
           color: "text-gray-600",
-          levelText: "Learning",
         },
         {
           name: "MongoDB",
           icon: SiMongodb,
           color: "text-green-500",
-          levelText: "Basic",
         },
         {
           name: "Firebase",
           icon: SiFirebase,
           color: "text-yellow-500",
-          levelText: "Learning",
+        },
+        {
+          name: "JWT",
+          icon: SiJsonwebtokens,
+          color: "text-teal-500",
         },
       ],
     },
@@ -115,37 +112,38 @@ const Skills = () => {
           name: "VS Code",
           icon: VscVscode,
           color: "text-blue-600",
-          levelText: "Good",
+        },
+        {
+          name: "Firebase",
+          icon: SiFirebase,
+          color: "text-yellow-500",
         },
         {
           name: "Git",
           icon: FaGitAlt,
           color: "text-orange-600",
-          levelText: "Learning",
         },
         {
           name: "Figma",
           icon: SiFigma,
           color: "text-purple-500",
-          levelText: "Basic",
         },
-        {
-          name: "Postman",
-          icon: SiPostman,
-          color: "text-orange-500",
-          levelText: "Learning",
-        },
+
         {
           name: "Vercel",
           icon: SiVercel,
           color: "text-black",
-          levelText: "Good",
         },
         {
           name: "Netlify",
           icon: SiNetlify,
           color: "text-teal-500",
-          levelText: "Good",
+        },
+
+        {
+          name: "GitHub",
+          icon: FaGithub,
+          color: "text-teal-500",
         },
       ],
     },
@@ -158,7 +156,11 @@ const Skills = () => {
           name: "Next.js",
           icon: SiNextdotjs,
           color: "text-gray-800",
-          levelText: "Learning",
+        },
+        {
+          name: "TypeScript",
+          icon: SiTypescript,
+          color: "text-gray-800",
         },
       ],
     },

@@ -84,25 +84,6 @@ const Banner = () => {
 
   return (
     <section className="min-h-screen bg-[#f5f5f7]   relative overflow-hidden pt-16 md:pt-20">
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        <motion.div
-          className="absolute top-10 sm:top-20 left-4 sm:left-10 w-12 h-12 sm:w-20 sm:h-20 bg-blue-200/30 rounded-full"
-          animate={{ y: [0, -20, 0] }}
-          transition={{ duration: 3, repeat: Infinity }}
-        />
-        <motion.div
-          className="absolute top-32 sm:top-40 right-4 sm:right-20 w-8 h-8 sm:w-16 sm:h-16 bg-purple-200/30 rounded-full"
-          animate={{ y: [0, -15, 0] }}
-          transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-        />
-        <motion.div
-          className="absolute bottom-32 sm:bottom-40 left-4 sm:left-20 w-6 h-6 sm:w-12 sm:h-12 bg-pink-200/30 rounded-full"
-          animate={{ y: [0, -10, 0] }}
-          transition={{ duration: 5, repeat: Infinity, delay: 2 }}
-        />
-      </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-b border-gray-200">
         <div className="min-h-screen flex items-center py-8 sm:py-12">
           <motion.div
@@ -194,8 +175,8 @@ const Banner = () => {
                 variants={itemVariants}
               >
                 <motion.a
-                    href="/resume.pdf"
-                    download
+                  href="/resume.pdf"
+                  download
                   className="w-full sm:w-auto flex items-center justify-center space-x-2 sm:space-x-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl font-medium text-sm sm:text-base"
                   whileHover={{
                     scale: 1.05,
@@ -208,8 +189,7 @@ const Banner = () => {
                 </motion.a>
 
                 <motion.a
-                    href="https://github.com/Abir-hasan-52"
-                 
+                  href="https://github.com/Abir-hasan-52"
                   className="w-full sm:w-auto flex items-center justify-center space-x-2 sm:space-x-3 px-6 sm:px-8 py-3 sm:py-4 bg-white/80 backdrop-blur-sm text-gray-800 rounded-2xl border border-gray-200 font-medium text-sm sm:text-base"
                   whileHover={{
                     scale: 1.05,
@@ -286,7 +266,6 @@ const Banner = () => {
               </motion.div>
             </div>
           </motion.div>
-          
         </div>
       </div>
     </section>

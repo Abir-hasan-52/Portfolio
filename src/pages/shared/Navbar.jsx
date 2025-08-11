@@ -60,14 +60,7 @@ const Navbar = () => {
       activeColor: "text-purple-600",
       hoverColor: "hover:text-purple-600",
     },
-    {
-      type: "route",
-      to: "education",
-      icon: FiBook,
-      label: "Education",
-      activeColor: "text-orange-600",
-      hoverColor: "hover:text-orange-600",
-    },
+    
     {
       type: "scroll",
       to: "projects",
