@@ -68,7 +68,7 @@ const About = () => {
               </div>
               
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                Hi, I'm <strong className="text-gray-900">ABTR HASAN</strong> - a passionate beginner in web development who loves turning creative ideas into functional web applications. My journey into programming started with curiosity and has grown into a genuine passion for creating digital experiences.
+                Hi, I'm <strong className="text-gray-900">ABIR HASAN</strong> - a passionate beginner in web development who loves turning creative ideas into functional web applications. My journey into programming started with curiosity and has grown into a genuine passion for creating digital experiences.
               </p>
               
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed">

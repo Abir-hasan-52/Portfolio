@@ -1,20 +1,39 @@
 import React from "react";
-import blackLogo from "../../assets/black.png";
-import whiteLogo from "../../assets/white.png";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router";
+import darkLogo from "../../assets/black.png"
 
 const Logo = () => {
-  // jodi background dark (theme black) hoy, tahole white logo
-  // ekhane ami assume korchi data-theme="dark" set kora ache body ba root e
-  const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/"); // Go to home page
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll
+  };
 
   return (
-    <div>
-      <img
-        src={isDark ? whiteLogo :blackLogo  }
+    <motion.div
+      className="flex items-center space-x-3 cursor-pointer select-none"
+      onClick={handleClick}
+      initial={{ opacity: 0, y: -8 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      whileHover={{ scale: 1.05 }}
+    >
+      {/* Logo Image */}
+      <motion.img
+        src={darkLogo}
         alt="Logo"
-        className="w-10 h-10 object-contain"
+        className="w-12 h-12 object-contain"
+        whileHover={{ rotate: 1 }}
+        transition={{ type: "spring", stiffness: 200 }}
       />
-    </div>
+
+      {/* Professional Name */}
+      <h2 className="text-2xl font-bold tracking-wide text-gray-900">
+        ABIR
+      </h2>
+    </motion.div>
   );
 };
 
