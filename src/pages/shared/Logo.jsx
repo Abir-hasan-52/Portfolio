@@ -13,7 +13,7 @@ const Logo = () => {
 
   return (
     <motion.div
-      className="flex items-center space-x-3 cursor-pointer select-none"
+      className="flex items-center space-x-1 cursor-pointer select-none"
       onClick={handleClick}
       initial={{ opacity: 0, y: -8 }}
       animate={{ opacity: 1, y: 0 }}
